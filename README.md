@@ -1,5 +1,9 @@
 # lerna-smart-run
 
+> Fork of purple-technology/lerna-smart-run
+
+Sets `lernarun` to global bin
+
 Lerna add-on for only running npm scripts for packages changed since previous tag
 
 # Background
