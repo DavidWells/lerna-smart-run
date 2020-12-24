@@ -4,6 +4,8 @@
 
 Sets `lernarun` to global bin
 
+Runs scripts on changed directories returned from `lerna changed`
+
 Lerna add-on for only running npm scripts for packages changed since previous tag
 
 # Background

@@ -9,7 +9,8 @@
     "test": "jest --coverage --forceExit --runInBand --detectOpenHandles"
   },
   "bin": {
-    "lernarun": "./src/index.js"
+    "lernarun": "./src/index.js",
+    "lerna-run-changed": "./src/index.js"
   },
   "repository": {
     "type": "git",

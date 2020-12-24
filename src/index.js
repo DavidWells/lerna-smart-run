@@ -61,10 +61,10 @@ const argv = globalOptions(
 const handler = async () => {
   try {
     const previousTag = gitOperations.getPreviousTag();
-    console.log('previousTag git tag', previousTag)
+    console.log('Previous git tag', previousTag)
 
     const changed = getLernaChanged()
-    console.log('Lerna changed', changed)
+    console.log('Lerna files changed', changed)
     if (!changed) {
       console.log('nothing changed')
       return 
@@ -119,7 +119,7 @@ const handler = async () => {
         "lerna-smart-run",
         `Tag ${previousTag} found. Executing smart ${script}`
       );
-      await lernaOperations.runCommand(argv, lernaArgs, previousTag);
+      await lernaOperations.runCommand(argv, lernaArgs, previousTag, scopes);
     }
 
     if (argv.tagOnSuccess) {
