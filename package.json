@@ -1,7 +1,7 @@
 {
   "name": "@davidwells/lerna-smart-run",
   "version": "0.5.0",
-  "description": "Lerna add-on for only running npm scripts for packages changed since previous branch-based tag. Fork of @purple/lerna-smart-run",
+  "description": "Lerna add-on for only running npm scripts for packages changed. Fork of @purple/lerna-smart-run",
   "main": "src/index.js",
   "scripts": {
     "version": "",

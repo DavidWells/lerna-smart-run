@@ -114,15 +114,15 @@ const orderPackages = async (packages, first, last) => {
   return { runFirstPkgGroups, otherPackages, runLastPkgGroups };
 };
 
-const runCommand = async (argv, lernaArgs, sinceRef = null) => {
-  const packages = await _findFilteredProjectPackages(argv, sinceRef)
-  
+const runCommand = async (argv, lernaArgs, sinceRef = null, pkgs) => {
+  const packages = pkgs || await _findFilteredProjectPackages(argv, sinceRef)
+
   const {
     runFirstPkgGroups,
     otherPackages,
     runLastPkgGroups,
   } = await orderPackages(packages, argv.runFirst, argv.runLast);
-
+      // process.exit(1)
   const defaultArgs = {
     ...lernaArgs,
     concurrency: argv["concurrency"] || os.cpus().length,
